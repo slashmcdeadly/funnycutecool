@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/scss/styles.css">
+    <title>happy/fun/cool</title>
+</head>
+<body>
+    <main>
+        <div class="buttons">
+            <div class="funny show" value="funny">
+                <button value="funny">
+                    <img src="./assets/funny.png" alt="funny">
+                </button>
+            </div>
+            <div class="cute show" value="cute">
+                <button value="cute">
+                    <img src="./assets/cute.png" alt="cute">
+                </button>
+            </div>
+            <div class="cool show" value="cool">
+                <button value="cool">
+                    <img src="./assets/cool.png" alt="cool">
+                </button>
+            </div>
+        </div>
+
+        <div class="gifContainer">
+            <!-- <iframe src="https://old.reddit.com/mediaembed/i8clrh" width="690" height="388"> -->
+        </div>
+
+        <a href="./addGif.html">add a gif</a>
+
+    </main>
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAK1SVT1IsPHPaqnAwrIxRnqSpN0kY9BUQ",
+            authDomain: "funnycutecool-77991.firebaseapp.com",
+            databaseURL: "https://funnycutecool-77991.firebaseio.com",
+            projectId: "funnycutecool-77991",
+            storageBucket: "funnycutecool-77991.appspot.com",
+            messagingSenderId: "703218095023",
+            appId: "1:703218095023:web:537038054d41c6fe9e155a"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
