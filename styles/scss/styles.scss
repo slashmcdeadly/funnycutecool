@@ -7,6 +7,16 @@ body {
     background-size: cover;
 }
 
+main {
+    display: flex;
+}
+
+.gifContainer {
+    position: absolute;
+    top: 70px;
+    right: -1000px;
+}
+
 .funny, .cute, .cool {
     width: 400px;
 }
@@ -15,11 +25,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .funny {
     position: relative;
-    left: 100px
+    right: -100px
 }
 
 .cute {
@@ -29,7 +40,7 @@ body {
 
 .cool {
     position: relative;
-    left: 100px
+    right: -100px
 }
 
 button {

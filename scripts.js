@@ -29,7 +29,13 @@ cuteApp.funny = () => {
     $('.show').on('click', function(r) {
 
         $('.gifContainer').empty();
-        console.log(r.target.alt)
+        
+        $('.show').animate({'position':'relative', 'right': '500px'}, 1500, function() {
+            // Animation complete.
+          });
+        $('.gifContainer').animate({"right":"200px"}, 1000, function() {
+            // Animation complete.
+          });
 
         if (r.target.alt === "funny"){
             const randomGif = Math.floor(Math.random() * funGifArray.length);
