@@ -38,9 +38,11 @@ cuteApp.funny = () => {
           });
 
         if (r.target.alt === "funny"){
+            
             const randomGif = Math.floor(Math.random() * funGifArray.length);
             let gifSelected = funGifArray[randomGif];
             const gifUrl = `https://old.reddit.com/mediaembed/${gifSelected}`;
+
             
             funGifEmbed = `<iframe src=${gifUrl} width="690" height="690"></iframe>`;
             $('.gifContainer').append(funGifEmbed);
