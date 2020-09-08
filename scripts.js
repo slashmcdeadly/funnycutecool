@@ -42,28 +42,54 @@ cuteApp.funny = () => {
             const randomGif = Math.floor(Math.random() * funGifArray.length);
             let gifSelected = funGifArray[randomGif];
             const gifUrl = `https://old.reddit.com/mediaembed/${gifSelected}`;
+            const content = [...gifSelected];
+
+            console.log(content.length)
+
+            if (content.length === 6 ){
+                funGifEmbed = `<iframe src=${gifUrl} width="690" height="690"></iframe>`;
+                $('.gifContainer').append(funGifEmbed);
+            
+            } else {
+                funGifEmbed = `<object type="text/html" data=${gifSelected} width="690px" height="700px" style="overflow:auto;border:5px ridge black">
+                </object>`;
+                $('.gifContainer').append(funGifEmbed);
+            }
 
             
-            funGifEmbed = `<iframe src=${gifUrl} width="690" height="690"></iframe>`;
-            $('.gifContainer').append(funGifEmbed);
 
         } else if (r.target.alt === "cute"){
             const randomGif = Math.floor(Math.random() * cuteGifArray.length);
             let gifSelected = cuteGifArray[randomGif];
             const gifUrl = `https://old.reddit.com/mediaembed/${gifSelected}`;
             
-            cuteGifEmbed = `<iframe src=${gifUrl} width="690" height="690"></iframe>`;
+            const content = [...gifSelected];
 
-            $('.gifContainer').append(cuteGifEmbed);
+            if (content.length === 6 ){
+                cuteGifEmbed = `<iframe src=${gifUrl} width="690" height="690"></iframe>`;
+                $('.gifContainer').append(cuteGifEmbed);            
+            } else {
+                cuteGifEmbed = `<object type="text/html" data=${gifSelected} width="690px" height="700px" style="overflow:auto;border:5px ridge black">
+                </object>`;
+                $('.gifContainer').append(cuteGifEmbed);
+            }
 
         } else if (r.target.alt === "cool"){
             const randomGif = Math.floor(Math.random() * coolGifArray.length);
             let gifSelected = coolGifArray[randomGif];
             const gifUrl = `https://old.reddit.com/mediaembed/${gifSelected}`;
-    
-            coolGifEmbed = `<iframe src=${gifUrl} width="690" height="690"></iframe>`;
+            const content = [...gifSelected];
+            console.log(content)
 
-            $('.gifContainer').append(coolGifEmbed);
+            if (content.length === 6 ){
+                coolGifEmbed = `<iframe src=${gifUrl} width="690" height="690"></iframe>`;
+                $('.gifContainer').append(coolGifEmbed);
+            
+            } else {
+                coolGifEmbed = `<object type="text/html" data=${gifSelected} width="690px" height="700px" style="overflow:auto;border:5px ridge black">
+                </object>`;
+                $('.gifContainer').append(coolGifEmbed);
+            }
         }
 
     })
